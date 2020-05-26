@@ -10,17 +10,17 @@ describe('error handling in chained promises', () => {
     promise.catch(() => {});
   });
   
-  
-  it('catch errors in intermediate promises', function() {
-    
-  });
-  
-  it('convert errors of intermediate steps', function() {
-    
-  });
-  
-  it('catch all vs. catch individual', function() {
-    
-  });
+  // TODO
+  // it('catch errors in intermediate promises', function() {
+  //
+  // });
+  //
+  // it('convert errors of intermediate steps', function() {
+  //
+  // });
+  //
+  // it('catch all vs. catch individual', function() {
+  //
+  // });
   
 });

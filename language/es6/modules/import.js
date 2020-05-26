@@ -8,7 +8,7 @@
 describe('use `import` to import functions that have been exported (somewhere else)', function() {
   describe('the import statement', function() {
     it('is only allowed on the root level', function() {
-      // Try to comment this out, it will yell at you!
+      // Try to uncomment this, it will yell at you!
       // import assert from 'assert';
     });
     it('import an entire module using `import <name> from "<moduleName>"`', function() {
