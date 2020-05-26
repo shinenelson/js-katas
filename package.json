@@ -3,21 +3,11 @@
   "version": "0.0.1",
   "description": "JavaScript Katas that can be run locally to learn on your own pace",
   "scripts": {
-    "test": "npm run test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED",
-    "test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED": "npm run _test \"{es1,es10,es6/language/{array-api,arrow-functions,block-scoping,class,default-parameters,destructuring,generator,map,object-api,object-literal,promise,reflect,rest,set}}\"",
-    "_test": "func() { mocha -r esm katas/\"$1\"/{**,**/**}/*.js --require=katas/mocha-require.js -R progress; }; func",
-    "test:katas": "npm run test:katas:libraries && npm run test:katas:language",
-    "test:katas:libraries": "npm run _test libraries",
-    "test:katas:libraries:hamjest": "npm run _test libraries/hamjest",
-    "test:katas:language": "npm run _test es*",
-    "test:katas:language:es1": "npm run _test es1",
-    "test:katas:language:es5": "npm run _test es5",
-    "test:katas:language:es6": "npm run _test es6",
-    "test:katas:language:es7": "npm run _test es7",
-    "test:katas:language:es8": "npm run _test es8",
-    "releasable": "node -r esm ./scripts/check-todo-list.js",
-    "preversion": "npm run releasable && npm test && npm run build",
-    "release": "npm version major"
+    "test": "func() { mocha -r esm \"$1\"/{**,**/**}/*.js --require=mocha-require.js -R progress; }; func",
+    "test:katas": "npm run test:libraries && npm run test:language",
+    "test:language": "npm run test language",
+    "test:learn-by-rewriting": "npm run test learn-by-rewriting",
+    "test:libraries": "npm run test libraries"
   },
   "repository": {
     "type": "git",
