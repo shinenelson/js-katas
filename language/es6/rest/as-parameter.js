@@ -3,7 +3,7 @@
 
 describe('Rest parameters in functions', () => {
   it('must be the last parameter', () => {
-    const fn = (...rest, veryLast) => {
+    const fn = (rest, veryLast) => {
       assert.deepEqual([1, 2], rest);
     };
     fn(1, 2);
@@ -21,6 +21,7 @@ describe('Rest parameters in functions', () => {
     fn(42, 'twenty three', 'win');
   });
   it('eliminate `arguments`!!!', () => {
+    // using arguments here hangs test execution #TODO investigate
     const fn = () => arguments;
     const [firstArg, ...rest] = fn(1, 2, 3);
     assert.deepEqual([2, 3], rest);

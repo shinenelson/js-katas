@@ -4,7 +4,7 @@
 
 describe('When destructuring you can also provide default values', () => {
   it('just assign a default value, like so `a=1`', () => {
-    const [a:1] = [];
+    const [a] = [];
     assert.equal(a, 1);
   });
   it('for a missing value', () => {

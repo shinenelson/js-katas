@@ -4,7 +4,7 @@
 
 describe('Inside a class use `super` to access parent methods', () => {
   it('use of `super` without `extends` fails (already when transpiling)', () => {
-    class A {hasSuper() { return super; }}
+    class A {hasSuper() { return; }}
     assert.equal(new A().hasSuper(), false);
   });
   it('`super` with `extends` calls the method of the given name of the parent class', () => {

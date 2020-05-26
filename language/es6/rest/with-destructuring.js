@@ -4,7 +4,7 @@
 
 describe('Rest parameters with destructuring', () => {
   it('must be last', () => {
-    const [...all, last] = [1, 2, 3, 4];
+    const [all, last] = [1, 2, 3, 4];
     assert.deepEqual(all, [1, 2, 3, 4]);
   });
   it('assign rest of an array to a variable', () => {
