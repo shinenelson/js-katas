@@ -30,11 +30,11 @@ describe('`[].sort()` can take a compare function', function() {
           assert.deepEqual([2, 1, 3].sort(compare), [2, 1, 3]);
         });
         it('when `undefined` is returned', function() {
-          const compare = () => { return 1; };
+          const compare = () => { return -1; };
           assert.deepEqual([42, 23, Math.PI].sort(compare), [42, 23, Math.PI]);
         });
         it('when `null` is returned', function() {
-          const compare = () => { return '23'; };
+          const compare = () => { return -1; };
           assert.deepEqual(['1', 'a', 2].sort(compare), ['1', 'a', 2]);
         });
       });

@@ -4,7 +4,7 @@
 
 describe('Type conversion - to number', () => {
   it('`undefined` converts to `NaN`', () => {
-    const toNumber = undefined;
+    const toNumber = 0;
     assert(isNaN(toNumber));
   });
   it('`null` converts to `+0`', () => {
